@@ -24,15 +24,25 @@ const diaHoje = 20
 const mesHoje = setembro
 const nomeMesHoje = "setembro"
 
-const diaEntrega = 5
-const mesEntrega = outubro
-const nomeMesEntrega = "outubro"
+const diaEntrega = 23
+const mesEntrega = setembro
+const nomeMesEntrega = "setembro"
 
 // CALCULO DE DIAS RESTANTES //
 const hojeEmDias = mesHoje + diaHoje
 const entregaEmDias = mesEntrega + diaEntrega
-
 const diasRestantes = entregaEmDias - hojeEmDias
+
+let prioridade
+if (diasRestantes <= 1) {
+    prioridade = "Urgente"
+} else if (diasRestantes <= 3) {
+    prioridade = "Alta"
+} else if (diasRestantes <= 7) {
+    prioridade = "Média"
+} else {
+    prioridade = "Baixa"
+}
 
 // DIFICULDADE DAS MATERIAS //
 if (materia === "arquitetura e manutencao de computadores") {
@@ -87,6 +97,7 @@ Dificuldade da matéria: ${dificuldade}
 Dia de hoje: ${diaHoje} de ${nomeMesHoje}
 Prazo de entrega: ${diaEntrega} de ${nomeMesEntrega}
 Dias restantes para entrega da atividade: ${diasRestantes} dias.
+Prioridade: ${prioridade}
 `
 
 console.log(resumo)
