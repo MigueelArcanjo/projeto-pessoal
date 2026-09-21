@@ -20,13 +20,13 @@ const tarefa = "Figuras de linguagem"
 let dificuldade
 
 // DATAS //
-const diaHoje = 1
+const diaHoje = 20
 const mesHoje = setembro
 const nomeMesHoje = "setembro"
 
-const diaEntrega = 1
-const mesEntrega = agosto
-const nomeMesEntrega = "setembro"
+const diaEntrega = 6
+const mesEntrega = outubro
+const nomeMesEntrega = "outubro"
 
 // CALCULO DE DIAS RESTANTES //
 const hojeEmDias = mesHoje + diaHoje
@@ -85,7 +85,7 @@ if (materia === "arquitetura e manutencao de computadores") {
 } else if (materia === "sociologia") { 
     dificuldade = "Fácil"
 } else {
-  dificuldade = "Matéria não identificada, tente não usar acentos nem letras maiúsculas."
+  dificuldade = "A dificuldade não pode ser declarada pois a matéria nao foi identificada, tente não usar letras maiúsculas nem acentuação."
 }
 
 const resumo = `
