@@ -15,17 +15,17 @@ const novembro = 304
 const dezembro = 334
 
 // MATÉRIA E TAREFA //
-const materia = "portugues" 
+const materia = "sociologia" 
 const tarefa = "Figuras de linguagem"
 let dificuldade
 
 // DATAS //
-const diaHoje = 20
+const diaHoje = 1
 const mesHoje = setembro
 const nomeMesHoje = "setembro"
 
-const diaEntrega = 23
-const mesEntrega = setembro
+const diaEntrega = 1
+const mesEntrega = agosto
 const nomeMesEntrega = "setembro"
 
 // CALCULO DE DIAS RESTANTES //
@@ -34,7 +34,10 @@ const entregaEmDias = mesEntrega + diaEntrega
 const diasRestantes = entregaEmDias - hojeEmDias
 
 let prioridade
-if (diasRestantes <= 1) {
+
+if (diasRestantes < 0) {
+    prioridade = "Você perdeu o prazo de entrega."
+} else if (diasRestantes <= 1) {
     prioridade = "Urgente"
 } else if (diasRestantes <= 3) {
     prioridade = "Alta"
@@ -81,12 +84,11 @@ if (materia === "arquitetura e manutencao de computadores") {
     dificuldade = "Média"
 } else if (materia === "sociologia") { 
     dificuldade = "Fácil"
+} else {
+  dificuldade = "Matéria não identificada, tente não usar acentos nem letras maiúsculas."
 }
 
 const resumo = `
-=========================================================
-    ORGANIZDOR DE TAREFAS E CALCULADOR DE PRIORIDADE
-=========================================================
 Matéria: ${materia}
 Assunto da tarefa: ${tarefa}
 Dificuldade da matéria: ${dificuldade}
