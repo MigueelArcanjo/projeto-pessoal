@@ -89,6 +89,9 @@ if (materia === "arquitetura e manutencao de computadores") {
 }
 
 const resumo = `
+=================================================
+ORGANIZADOR DE TAREFAS E CALCULADOR DE PRIORIDADE
+=================================================
 Matéria: ${materia}
 Assunto da tarefa: ${tarefa}
 Dificuldade da matéria: ${dificuldade}
